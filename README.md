@@ -5,7 +5,7 @@ Logic code to simplify tile development for module platform, provides basic clas
 
 ## Installation
 - **Prefered:** NuGet package (TODO: add link)
-- **Customization**: Git Sub-Module
+- **For customization**: Git Sub-Module
 ```
 cd solution-folder
 git submodule add -b master https://github.com/moduware/platform-tile.git
@@ -97,5 +97,26 @@ public override void ViewDidLoad()
     ConfigurationApplied += (o, e) => ...;
 
     base.ViewDidLoad(); 
+}
+```
+
+In your *AppDelegate.cs* you need override two methods and pass their data to `TileViewController` handlers:
+
+```csharp
+public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+{
+    // custom stuff here using different properties of the url passed in
+    var viewController = (TileViewController)Window.RootViewController;
+    viewController.OnQueryRecieved(url.AbsoluteString);
+
+    return true;
+}
+
+public override void OnActivated(UIApplication application)
+{
+    // Restart any tasks that were paused (or not yet started) while the application was inactive. 
+    // If the application was previously in the background, optionally refresh the user interface.
+    var viewController = (TileViewController)Window.RootViewController;
+    viewController.OnResumeActions();
 }
 ```
