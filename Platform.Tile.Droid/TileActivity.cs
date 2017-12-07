@@ -1,9 +1,5 @@
-﻿using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.OS;
-using Moduware.Platform.Core.CommonTypes;
-using System;
-using System.Threading.Tasks;
 
 namespace Moduware.Platform.Tile.Droid
 {

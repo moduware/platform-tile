@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Moduware.Platform.Tile</id>
+    <version>1.0.0</version>
+    <authors>Moduware PTY LTD</authors>
+    <owners>alex.chernov</owners>
+    <licenseUrl>https://github.com/moduware/platform-tile/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/moduware/platform-tile</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/moduware/platform-tile/master/nuget_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Shared logic for Moduware native tiles.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2017</copyright>
+    <tags>Bluetooth Moduware Modules</tags>
+    <dependencies>
+      <dependency id="Moduware.Platform.Core" version="0.5.6536" />
+      <dependency id="Microsoft.Bcl.Async" version="1.0.168" />
+      <dependency id="PCLStorage" version="1.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- PCL -->
+    <file src="Platform.Tile.Types\bin\Release\*.dll" target="lib\portable-net45+win8+wpa81+wp8" />
+    <!-- Android -->
+    <file src="Platform.Tile.Droid\bin\Release\Moduware.Platform.Tile.*" target="lib\MonoAndroid" />
+    <!-- iOS -->
+    <file src="Platform.Tile.iOS\bin\Release\Moduware.Platform.Tile.*" target="lib\Xamarin.iOS10" />
+  </files>
+</package>
