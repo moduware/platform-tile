@@ -4,7 +4,7 @@ Shared logic for Moduware native tiles.
 Logic code to simplify tile development for module platform, provides basic classes for both iOS and Android platforms, tools and predefines tile behaviour that cannot be altered.
 
 ## Installation
-- **Prefered:** NuGet package (TODO: add link)
+- **Prefered:** [NuGet package](https://www.nuget.org/packages/Moduware.Platform.Tile/)
 - **For customization**: Git Sub-Module
 ```
 cd solution-folder
